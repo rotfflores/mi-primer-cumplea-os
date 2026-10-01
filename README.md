@@ -2,6 +2,12 @@
 
 Abre `index.html` en un navegador. HTML, CSS y JavaScript sin dependencias ni conexión a internet.
 
+## Vista previa al compartir
+
+La cabecera de `index.html` define el título, la descripción y la imagen Open Graph que muestran WhatsApp y otras aplicaciones al compartir `https://mi-primer-cumple.rotfstudio.com/`. La imagen pública es `assets/yovana-vista-whatsapp.png` (1254 × 1254); reemplaza ese archivo si cambias el diseño de la invitación. `CNAME` identifica el dominio para GitHub Pages.
+
+La vista previa solo puede aparecer cuando estos archivos estén publicados en ese dominio y la imagen sea accesible sin iniciar sesión. WhatsApp puede conservar una vista previa anterior en caché durante un tiempo.
+
 ## Personalizar
 
 Edita `INVITATION_CONFIG`, al inicio de `script.js`:
