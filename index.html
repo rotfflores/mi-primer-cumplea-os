@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f5efe5" />
+    <meta name="description" content="Un primer añito, un amor infinito. Una invitación de Rotf Studio para celebrar a Yovana." />
+    <title>Mi primer añito · Yovana | Rotf Studio</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js" defer></script>
+    <noscript>
+      <style>
+        .invitation-intro { display: none; }
+        .invitation-content { opacity: 1 !important; visibility: visible !important; transform: none !important; }
+      </style>
+    </noscript>
+  </head>
+  <body>
+    <main id="invitation">
+      <section class="birthday-cover" id="portada" data-state="closed" aria-labelledby="intro-title">
+        <header class="studio-signature" aria-label="Una invitación de Rotf Studio">
+          <span class="studio-signature__name">rotf<span class="studio-signature__dot">.</span></span>
+          <span class="studio-signature__label">STUDIO</span>
+        </header>
+
+        <div class="cover-landscape" aria-hidden="true">
+          <span class="landscape-ring landscape-ring--left"></span>
+          <span class="landscape-ring landscape-ring--right"></span>
+          <div class="balloon balloon--peach">
+            <img src="./assets/balloon-peach.svg" alt="" width="116" height="340" />
+          </div>
+          <div class="balloon balloon--cream">
+            <img src="./assets/balloon-cream.svg" alt="" width="100" height="320" />
+          </div>
+        </div>
+
+        <div class="invitation-stage">
+          <article class="invitation-intro" id="invitation-intro">
+            <div class="closed-card">
+              <p class="card-eyebrow">PARA TI, CON MUCHO CARIÑO</p>
+              <div class="teddy-portrait" aria-hidden="true">
+                <span class="teddy-portrait__arch"></span>
+                <img class="teddy-portrait__image" src="./assets/osito.webp" alt="" width="260" height="260" fetchpriority="high" />
+              </div>
+              <h1 class="intro-title" id="intro-title">¡Tengo algo<br />que celebrar!</h1>
+              <p class="intro-message">Una pequeña sorpresa<br />está esperando por ti</p>
+              <button class="open-button" id="open-invitation" type="button" aria-controls="invitation-content" aria-expanded="false">
+                <span>Abrir invitación</span>
+                <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+                  <path d="M4 12h15m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+              <span class="card-bottom-line" aria-hidden="true"></span>
+            </div>
+          </article>
+
+          <article class="invitation-content" id="invitation-content">
+            <p class="birthday-eyebrow">Mi primer añito</p>
+            <h1 class="birthday-name" id="birthday-name" tabindex="-1" data-name>Yovana</h1>
+
+            <div class="birthday-portrait">
+              <figure class="photo-frame" aria-label="Fotografía de Yovana">
+                <div class="photo-placeholder" id="photo-placeholder">
+                  <span class="photo-placeholder__arch" aria-hidden="true"></span>
+                  <span class="photo-placeholder__initial" data-initial aria-hidden="true">Y</span>
+                  <span class="photo-placeholder__caption">Un pequeño recuerdo,<br />un amor infinito.</span>
+                  <span class="photo-placeholder__label">FOTOGRAFÍA DE <span data-photo-name>YOVANA</span></span>
+                </div>
+                <img class="baby-photo" id="baby-photo" alt="Fotografía de Yovana" width="440" height="560" hidden />
+              </figure>
+              <img class="portrait-teddy" src="./assets/osito.webp" alt="" width="260" height="260" aria-hidden="true" />
+              <span class="portrait-accent" aria-hidden="true"></span>
+            </div>
+
+            <p class="birthday-message">365 días llenando de amor a mi familia.<br /><span>¡Ven a celebrar conmigo!</span></p>
+            <div class="birthday-date">
+              <span class="date-rule" aria-hidden="true"></span>
+              <time datetime="2026-11-15" id="birthday-date">15 de noviembre de 2026</time>
+              <span class="date-rule" aria-hidden="true"></span>
+            </div>
+            <p class="birthday-closing">La celebración apenas comienza</p>
+          </article>
+        </div>
+
+        <p class="cover-footnote" aria-hidden="true">UN PRIMER AÑITO. UN AMOR INFINITO.</p>
+        <div class="scroll-hint" id="scroll-hint" aria-hidden="true">
+          <span>DESLIZA</span>
+          <svg viewBox="0 0 24 24" width="16" height="16" focusable="false">
+            <path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+        <p class="sr-only" id="invitation-status" role="status" aria-live="polite" aria-atomic="true"></p>
+      </section>
+
+      <section class="birthday-presentation" id="presentacion" aria-labelledby="presentation-title">
+        <span class="presentation-seal" aria-hidden="true">1</span>
+        <div class="presentation-decoration" aria-hidden="true">
+          <span class="presentation-edge presentation-edge--left"></span>
+          <span class="presentation-edge presentation-edge--right"></span>
+        </div>
+
+        <div class="presentation-letter">
+          <header class="presentation-heading" data-reveal>
+            <span class="presentation-rule" aria-hidden="true"></span>
+            <p class="presentation-eyebrow">Un año de pequeñas grandes alegrías</p>
+            <h2 class="presentation-title" id="presentation-title">
+              <span class="presentation-title__line"><span class="presentation-title__name">¡<span data-name>Yovana</span></span> <span class="presentation-title__verb">cumple</span></span>
+              <span class="presentation-title__line"><span class="presentation-title__verb">su</span> <span class="presentation-title__milestone">primer añito!</span></span>
+            </h2>
+          </header>
+
+          <div class="presentation-message">
+            <p data-reveal>Hace un año llegó a nuestras vidas una pequeña personita que lo cambió todo. Desde entonces, cada sonrisa, cada abrazo y cada descubrimiento se han convertido en nuestros recuerdos favoritos.</p>
+            <p data-reveal>Queremos celebrar este primer añito rodeados de quienes forman parte de nuestra historia. ¡Nos encantará compartir este día contigo!</p>
+          </div>
+
+          <p class="presentation-signature" data-reveal><span class="presentation-signature__lead">Con cariño,</span> mamá y papá</p>
+          <div class="presentation-keepsake" data-reveal aria-hidden="true">
+            <span class="date-rule"></span>
+            <img src="./assets/osito.webp" alt="" width="80" height="80" loading="lazy" />
+            <span class="date-rule"></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="birthday-countdown" id="cuenta-regresiva" aria-labelledby="countdown-title">
+        <div class="countdown-content">
+          <header class="countdown-heading" data-reveal>
+            <p class="presentation-eyebrow countdown-eyebrow">Ya casi llega el gran día</p>
+            <h2 class="countdown-title" id="countdown-title">¡Falta poquito<br /><span>para celebrar!</span></h2>
+          </header>
+
+          <div class="countdown-scene" data-reveal>
+            <div class="countdown-scenery" aria-hidden="true">
+              <span class="countdown-backdrop"></span>
+              <svg class="countdown-garland" viewBox="0 0 240 44" aria-hidden="true" focusable="false">
+                <path d="M4 8Q120 36 236 8" fill="none" stroke="#c9ad92" stroke-width=".8"/>
+                <path d="M15.6 12.1h14l-7 17z" fill="#e5b797"/><path d="M48.0 17.6h14l-7 17z" fill="#eadbc3"/><path d="M80.5 20.9h14l-7 17z" fill="#e5b797"/><path d="M113.0 22h14l-7 17z" fill="#eadbc3"/><path d="M145.5 20.9h14l-7 17z" fill="#e5b797"/><path d="M178.0 17.6h14l-7 17z" fill="#eadbc3"/><path d="M210.4 12.1h14l-7 17z" fill="#e5b797"/>
+              </svg>
+              <div class="scene-balloon scene-balloon--peach">
+                <img src="./assets/balloon-peach.svg" alt="" width="116" height="340" loading="lazy" />
+              </div>
+              <div class="scene-balloon scene-balloon--cream">
+                <img src="./assets/balloon-cream.svg" alt="" width="100" height="320" loading="lazy" />
+              </div>
+              <div class="countdown-toys">
+                <img class="countdown-teddy" src="./assets/osito.webp" alt="" width="130" height="130" loading="lazy" />
+                <div class="toy-block"><span>1</span></div>
+              </div>
+            </div>
+
+            <div class="countdown-display">
+              <div id="countdown-values" role="timer" aria-label="Tiempo restante para el cumpleaños" aria-live="off" hidden>
+                <dl class="countdown-grid">
+                  <div class="countdown-cube">
+                    <dt class="countdown-label">Días</dt>
+                    <dd class="countdown-number countdown-number--days" data-countdown="dias">0</dd>
+                  </div>
+                  <div class="countdown-cube">
+                    <dt class="countdown-label">Horas</dt>
+                    <dd class="countdown-number" data-countdown="horas">00</dd>
+                  </div>
+                  <div class="countdown-cube">
+                    <dt class="countdown-label">Minutos</dt>
+                    <dd class="countdown-number" data-countdown="minutos">00</dd>
+                  </div>
+                  <div class="countdown-cube">
+                    <dt class="countdown-label">Segundos</dt>
+                    <dd class="countdown-number" data-countdown="segundos">00</dd>
+                  </div>
+                </dl>
+              </div>
+              <p class="countdown-when" id="countdown-when" hidden></p>
+              <p class="countdown-celebration" id="countdown-celebration" role="status" aria-live="polite" aria-atomic="true" hidden></p>
+              <p class="countdown-fallback" id="countdown-fallback">Nos vemos el <time id="countdown-event-time" datetime="2026-11-15T16:00:00-06:00">15 de noviembre de 2026 a las 4:00 p. m.</time></p>
+            </div>
+          </div>
+
+          <p class="countdown-closing" data-reveal>Tenemos un añito de alegría<br />para compartir contigo</p>
+        </div>
+      </section>
+
+      <section class="birthday-location" id="ubicacion" aria-labelledby="location-title">
+        <div class="location-content">
+          <header class="location-heading" data-reveal>
+            <p class="presentation-eyebrow location-eyebrow">Tenemos una cita muy especial</p>
+            <h2 class="location-title" id="location-title">¡Aquí nos vemos!</h2>
+          </header>
+
+          <div class="party-card-shell" data-reveal>
+            <div class="party-decoration" aria-hidden="true">
+              <div class="party-balloon party-balloon--peach">
+                <img src="./assets/balloon-peach.svg" alt="" width="116" height="340" loading="lazy" />
+              </div>
+              <div class="party-balloon party-balloon--cream">
+                <img src="./assets/balloon-cream.svg" alt="" width="100" height="320" loading="lazy" />
+              </div>
+              <div class="party-teddy-peek">
+                <img src="./assets/osito.webp" alt="" width="90" height="90" loading="lazy" />
+              </div>
+            </div>
+
+            <div class="party-card">
+              <dl class="party-details">
+                <div class="party-detail party-detail--date">
+                  <dt>
+                    <svg class="party-icon" viewBox="0 0 32 32" width="28" height="28" aria-hidden="true" focusable="false">
+                      <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="6" y="8" width="20" height="19" rx="4" />
+                        <path d="M11 5v6m10-6v6M6 14h20m-15 5h2m6 0h2m-10 4h2m6 0h2" />
+                      </g>
+                    </svg>
+                    <span>Fecha</span>
+                  </dt>
+                  <dd><time class="party-calendar" id="location-date" datetime="2026-11-15T16:00:00-06:00"><span class="party-calendar__weekday">Domingo</span> <span class="party-calendar__day">15</span> <span class="party-calendar__month">noviembre 2026</span></time></dd>
+                </div>
+                <div class="party-detail party-detail--time">
+                  <dt>
+                    <svg class="party-icon" viewBox="0 0 32 32" width="28" height="28" aria-hidden="true" focusable="false">
+                      <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="16" cy="16" r="10.5" />
+                        <path d="M16 9v7l5 3" />
+                      </g>
+                    </svg>
+                    <span>Horario</span>
+                  </dt>
+                  <dd><time id="location-time" datetime="2026-11-15T16:00:00-06:00">4:00 p. m.</time><span class="party-time-zone">Hora del centro de México</span></dd>
+                </div>
+                <div class="party-detail party-detail--venue">
+                  <dt>
+                    <svg class="party-icon" viewBox="0 0 32 32" width="28" height="28" aria-hidden="true" focusable="false">
+                      <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M24.5 13.5C24.5 20 16 27 16 27S7.5 20 7.5 13.5a8.5 8.5 0 0 1 17 0Z" />
+                        <circle cx="16" cy="13.5" r="3" />
+                      </g>
+                    </svg>
+                    <span>Lugar</span>
+                  </dt>
+                  <dd>
+                    <a class="party-map" id="location-map-link" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+                      <svg viewBox="0 0 300 120" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <rect width="300" height="120" fill="#f5ecdf" />
+                        <path d="M150 18c38-10 92 2 108 26s-6 52-46 58-86-4-100-28 0-48 38-56Z" fill="#ead3bf" opacity=".75" />
+                        <g fill="#dcc2a8"><circle cx="168" cy="34" r="5" /><circle cx="232" cy="44" r="6" /><circle cx="214" cy="84" r="5" /><circle cx="150" cy="78" r="4" /><circle cx="246" cy="70" r="4" /></g>
+                        <g fill="none" stroke-linecap="round">
+                          <g stroke="#e3d2bd" stroke-width="12"><path d="M-10 92C60 78 92 104 160 88s120-30 170-18" /><path d="M70-10C78 40 64 80 84 130" /><path d="M276-10c-8 40 8 80-4 140" /></g>
+                          <g stroke="#fffaf3" stroke-width="9"><path d="M-10 92C60 78 92 104 160 88s120-30 170-18" /><path d="M70-10C78 40 64 80 84 130" /><path d="M276-10c-8 40 8 80-4 140" /></g>
+                          <path d="M30 108C70 100 96 72 132 68s40-4 52-10" stroke="#b58466" stroke-width="1.6" stroke-dasharray="3 5" />
+                        </g>
+                        <circle cx="30" cy="108" r="4" fill="#fffaf3" stroke="#b58466" stroke-width="1.4" />
+                        <ellipse cx="186" cy="59" rx="9" ry="3" fill="#80604533" />
+                        <g class="party-map__pin"><path d="M186 58c-7-8-11-13-11-19a11 11 0 0 1 22 0c0 6-4 11-11 19Z" fill="#765340" /><circle cx="186" cy="39" r="4" fill="#fcf9f3" /></g>
+                      </svg>
+                    </a>
+                    <p class="party-venue" id="location-venue">Parque Bicentenario</p>
+                    <p class="party-address" id="location-address">Av. 5 de Mayo 290, Col. Refinería 18 de Marzo, Miguel Hidalgo, 11210, Ciudad de México</p>
+                  </dd>
+                </div>
+              </dl>
+
+              <div class="location-action">
+                <a class="directions-button" id="directions-link" href="https://www.google.com/maps/search/?api=1&amp;query=Parque%20Bicentenario%2C%20Av.%205%20de%20Mayo%20290%2C%20Ciudad%20de%20M%C3%A9xico" target="_blank" rel="noopener noreferrer" aria-label="Cómo llegar: abrir Google Maps en una pestaña nueva">
+                  <span>Cómo llegar</span>
+                  <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+                    <path d="M5 19 19 5M7 5h12v12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </a>
+                <p class="location-pending" id="location-pending" hidden><span aria-hidden="true"></span>Ubicación por confirmar</p>
+              </div>
+            </div>
+          </div>
+
+          <p class="location-closing" data-reveal>¡Te esperamos para celebrar juntos!</p>
+        </div>
+      </section>
+
+      <section class="birthday-memories" id="asi-he-crecido" aria-labelledby="memories-title">
+        <div class="memories-content">
+          <header class="memories-heading" data-reveal>
+            <p class="presentation-eyebrow memories-eyebrow">Pequeños momentos, grandes recuerdos</p>
+            <h2 class="memories-title" id="memories-title">Así he crecido</h2>
+            <p class="memories-intro">En un añito han pasado tantas cosas… Mira cuánto he crecido y cuántas sonrisas hemos compartido.</p>
+          </header>
+
+          <ol class="memories-timeline" id="memories-list" aria-label="Tres recuerdos de mi primer año">
+            <li class="memory" data-reveal>
+              <figure>
+                <div class="memory-frame">
+                  <a class="memory-photo" href="./assets/recuerdo-recien-nacido.webp" aria-label="Ver fotografía completa: Cuando llegué">
+                    <img src="./assets/recuerdo-recien-nacido.webp" alt="Foto de catálogo: un recién nacido duerme sobre una manta de punto crema." width="1600" height="1067" loading="lazy" decoding="async" style="--memory-position: 50% 50%" />
+                  </a>
+                  <span class="memory-print" aria-hidden="true">01 / mi historia</span>
+                </div>
+                <figcaption class="memory-caption">
+                  <h3>Cuando llegué</h3>
+                  <p>Pequeñito en sus brazos, llené de amor su mundo.</p>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="memory" data-reveal>
+              <figure>
+                <div class="memory-frame">
+                  <a class="memory-photo" href="./assets/recuerdo-seis-meses.webp" aria-label="Ver fotografía completa: A mis seis meses">
+                    <img src="./assets/recuerdo-seis-meses.webp" alt="Foto de catálogo: una bebé sonríe sobre una manta, con un lazo amarillo." width="1060" height="1600" loading="lazy" decoding="async" style="--memory-position: 50% 65%" />
+                  </a>
+                  <span class="memory-print" aria-hidden="true">02 / mi historia</span>
+                </div>
+                <figcaption class="memory-caption">
+                  <h3>A mis seis meses</h3>
+                  <p>Entre risas y descubrimientos, fui mostrando mi personalidad.</p>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="memory" data-reveal>
+              <figure>
+                <div class="memory-frame">
+                  <a class="memory-photo" href="./assets/recuerdo-primer-anito.webp" aria-label="Ver fotografía completa: ¡Mi primer añito!">
+                    <img src="./assets/recuerdo-primer-anito.webp" alt="Foto de catálogo: una bebé con gorrito de cumpleaños junto a globos crema." width="1067" height="1600" loading="lazy" decoding="async" style="--memory-position: 50% 100%" />
+                  </a>
+                  <span class="memory-print" aria-hidden="true">03 / mi historia</span>
+                </div>
+                <figcaption class="memory-caption">
+                  <h3>¡Mi primer añito!</h3>
+                  <p>Hoy tengo nuevas aventuras por vivir y un cumpleaños que celebrar contigo.</p>
+                </figcaption>
+              </figure>
+            </li>
+          </ol>
+
+          <div class="memories-keepsake" data-reveal>
+            <img src="./assets/osito.webp" alt="" width="90" height="90" loading="lazy" aria-hidden="true" />
+            <p class="memories-sample-note">Fotografías de muestra para el catálogo</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="birthday-rsvp" id="confirmacion" aria-labelledby="rsvp-title">
+        <div class="rsvp-content">
+          <header class="rsvp-heading" data-reveal>
+            <p class="presentation-eyebrow rsvp-eyebrow">Tu presencia y tus palabras son un regalo</p>
+            <h2 class="rsvp-title" id="rsvp-title">¿Nos acompañas?</h2>
+            <p class="rsvp-intro">Confirma tu asistencia y, si quieres, déjame unas palabras. Mamá y papá las guardarán para que pueda leerlas cuando sea más grande.</p>
+          </header>
+
+          <div class="rsvp-layout">
+            <div class="mailbox-keepsake" data-reveal>
+              <div class="mailbox-scene" id="mailbox-scene" aria-hidden="true">
+                <svg viewBox="0 0 400 330" width="400" height="330" focusable="false">
+                  <defs>
+                    <linearGradient id="mailbox-peach" x2=".8" y2="1"><stop stop-color="#efcfb6" /><stop offset="1" stop-color="#d9a887" /></linearGradient>
+                    <linearGradient id="mailbox-paper" x2="0" y2="1"><stop stop-color="#fffaf1" /><stop offset="1" stop-color="#efe0cd" /></linearGradient>
+                  </defs>
+                  <ellipse cx="215" cy="291" rx="147" ry="12" fill="#d7bca0" opacity=".18" />
+                  <path d="M102 263c-16-74 10-159 76-194 57-30 132-14 155 46 15 37 11 103-8 145" fill="none" stroke="#dfccb6" stroke-width="1" />
+                  <g transform="translate(44 43) rotate(-13 32 22)" fill="url(#mailbox-paper)" stroke="#c6aa8b" stroke-width="1.2" stroke-linejoin="round">
+                    <rect width="64" height="43" rx="4" /><path d="m1 2 31 23L63 2M2 41l20-19m40 19L42 22" fill="none" />
+                  </g>
+                  <g transform="translate(332 133) rotate(12 23 16)" fill="#f6e6d6" stroke="#c9a98a" stroke-width="1.1" stroke-linejoin="round">
+                    <rect width="46" height="32" rx="3" /><path d="m1 2 22 16L45 2M2 30l13-13m29 13L31 17" fill="none" />
+                  </g>
+                  <rect x="238" y="171" width="20" height="112" rx="4" fill="#b89172" />
+                  <path d="M243 182v91m8-91v91" stroke="#d9b99b" stroke-width="1.1" opacity=".65" />
+                  <path d="M233 277h31l9 9h-50Z" fill="#d5b292" stroke="#b58b69" stroke-width="1" />
+                  <path d="M204 76h70a55 55 0 0 1 55 55v49H204Z" fill="url(#mailbox-peach)" stroke="#b58a69" stroke-width="1.4" />
+                  <path d="M148 130a56 56 0 0 1 112 0v50H148Z" fill="#f4dbc6" stroke="#b58a69" stroke-width="1.4" />
+                  <path d="M155 130a49 49 0 0 1 98 0v42h-98Z" fill="url(#mailbox-paper)" stroke="#d1b090" stroke-width="1" />
+                  <rect x="174" y="125" width="60" height="7" rx="3.5" fill="#8e6b53" />
+                  <path d="M180 140h47" stroke="#dbc5ae" stroke-width="1" />
+                  <g class="mailbox-flag"><path d="M285 127V61h27l-5 10 5 11h-22" fill="#bf8260" stroke="#a67554" stroke-width="1.3" stroke-linejoin="round" />
+                  <circle cx="285" cy="127" r="4" fill="#a67554" /></g>
+                  <path d="M203 149c-6-8-13-3-8 3l8 7 8-7c5-6-2-11-8-3Z" fill="#d2a789" />
+                  <g class="delivery-letter" transform="translate(180 102)" fill="#fffaf1" stroke="#b58a69" stroke-width="1.2" stroke-linejoin="round">
+                    <rect width="49" height="32" rx="3" /><path d="m1 2 23 17L48 2M2 30l14-13m31 13L33 17" fill="none" />
+                  </g>
+                </svg>
+                <img class="mailbox-teddy" src="./assets/osito.webp" alt="" width="145" height="145" loading="lazy" />
+              </div>
+              <p class="mailbox-caption">Para <span data-name>Yovana</span>, con amor</p>
+              <span class="mailbox-rule" aria-hidden="true"></span>
+            </div>
+
+            <div class="letter-card" data-reveal>
+              <div class="letter-card-heading">
+                <span class="letter-card-number" aria-hidden="true">Una carta para el futuro</span>
+                <svg class="letter-stamp" viewBox="0 0 48 54" width="38" height="43" aria-hidden="true" focusable="false"><path d="M5 5h38v44H5Z" fill="none" stroke="#c5a98b" stroke-width="1.2" stroke-dasharray="2 3" /><rect x="10" y="10" width="28" height="34" rx="2" fill="#f2dfce" /><path d="M24 22c-7-9-15-2-9 5l9 8 9-8c6-7-2-14-9-5Z" fill="none" stroke="#ad8061" stroke-width="1.2" stroke-linejoin="round" /></svg>
+              </div>
+              <p class="rsvp-availability" id="rsvp-availability" hidden>El buzón estará disponible pronto</p>
+              <form id="rsvp-form" novalidate aria-describedby="rsvp-availability rsvp-privacy">
+                <div class="rsvp-alert" id="rsvp-alert" role="alert" aria-atomic="true"></div>
+                <fieldset class="rsvp-fields" id="rsvp-fields">
+                  <legend class="sr-only">Tu confirmación y tu cartita</legend>
+                  <div class="rsvp-field">
+                    <label for="guest-name">Tu nombre <span class="field-required">(obligatorio)</span></label>
+                    <input id="guest-name" name="nombreInvitado" type="text" autocomplete="name" maxlength="100" required aria-describedby="guest-name-error" placeholder="Como te conoce nuestra familia" />
+                    <p class="field-error" id="guest-name-error" hidden></p>
+                  </div>
+                  <fieldset class="attendance-field" aria-describedby="attendance-error">
+                    <legend>¿Podrás acompañarnos? <span class="field-required">(obligatorio)</span></legend>
+                    <div class="attendance-options">
+                      <label class="attendance-choice attendance-choice--yes"><input type="radio" name="asistencia" value="si" required /><svg class="attendance-icon" viewBox="0 0 36 36" width="34" height="34" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M18 4c-6 0-10 4.6-10 10.4C8 21 13 25 18 27c5-2 10-6 10-12.6C28 8.6 24 4 18 4Z" fill="#efcdb6" /><path d="m16.5 27 1.5 2 1.5-2M18 29c-1 2.5 1.5 3.5 0 6" /><path d="M13 11.5c.8-2 2.4-3.2 4.2-3.5" /></g></svg><span class="attendance-text">¡Sí, ahí estaré!</span><span class="attendance-check" aria-hidden="true"></span></label>
+                      <label class="attendance-choice attendance-choice--no"><input type="radio" name="asistencia" value="no" required /><svg class="attendance-icon" viewBox="0 0 36 36" width="34" height="34" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10" width="26" height="18" rx="3" fill="#f6e6d6" /><path d="m6 11.5 12 9 12-9" /><path d="M18 8.5c-1.6-2.3-4.6-.9-3.4 1.2L18 13l3.4-3.3c1.2-2.1-1.8-3.5-3.4-1.2Z" fill="#d2a789" stroke="none" /></g></svg><span class="attendance-text">Esta vez no podré</span><span class="attendance-check" aria-hidden="true"></span></label>
+                    </div>
+                    <p class="field-error" id="attendance-error" hidden></p>
+                  </fieldset>
+                  <fieldset class="guest-counts" id="guest-counts" hidden disabled>
+                    <legend class="sr-only">¿Cuántos vendrán?</legend>
+                    <div class="rsvp-field">
+                      <label for="guest-adults">Número de adultos</label>
+                      <div class="number-stepper">
+                        <button class="stepper-button" type="button" data-step="-1" aria-controls="guest-adults" aria-label="Quitar un adulto"><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true" focusable="false"><path d="M5 10h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" /></svg></button>
+                        <input id="guest-adults" name="adultos" type="number" inputmode="numeric" min="1" step="1" required value="1" aria-describedby="adults-hint guest-adults-error" />
+                        <button class="stepper-button" type="button" data-step="1" aria-controls="guest-adults" aria-label="Agregar un adulto"><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true" focusable="false"><path d="M5 10h10M10 5v10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" /></svg></button>
+                      </div>
+                      <p class="field-error" id="guest-adults-error" hidden></p>
+                    </div>
+                    <div class="rsvp-field">
+                      <label for="guest-children">Número de niños</label>
+                      <div class="number-stepper">
+                        <button class="stepper-button" type="button" data-step="-1" aria-controls="guest-children" aria-label="Quitar un niño"><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true" focusable="false"><path d="M5 10h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" /></svg></button>
+                        <input id="guest-children" name="ninos" type="number" inputmode="numeric" min="0" step="1" required value="0" aria-describedby="guest-children-error" />
+                        <button class="stepper-button" type="button" data-step="1" aria-controls="guest-children" aria-label="Agregar un niño"><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true" focusable="false"><path d="M5 10h10M10 5v10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" /></svg></button>
+                      </div>
+                      <p class="field-error" id="guest-children-error" hidden></p>
+                    </div>
+                    <p class="rsvp-hint counts-hint" id="adults-hint">Inclúyete en el número de adultos</p>
+                  </fieldset>
+
+                  <div class="future-letter">
+                    <h3 id="letter-title">Una cartita para mi yo del futuro</h3>
+                    <p id="letter-hint">Un deseo, un consejo o un recuerdo… Tus palabras serán un tesoro cuando crezca.</p>
+                    <button class="letter-toggle" id="letter-toggle" type="button" aria-expanded="true" aria-controls="letter-body" hidden>
+                      <span class="letter-toggle__envelope"><svg viewBox="0 0 44 32" width="40" height="29" aria-hidden="true" focusable="false"><g fill="#fffaf1" stroke="#b58a69" stroke-width="1.2" stroke-linejoin="round"><rect x="1" y="5" width="42" height="26" rx="3" /><path class="envelope-letter" d="M7 13V2h30v11" fill="#fffdf9" /><path class="envelope-flap" d="m2 6 20 14L42 6" /></g><path d="M22 23.5c-2-2-4-3.4-4-5a2 2 0 0 1 4-.7 2 2 0 0 1 4 .7c0 1.6-2 3-4 5Z" fill="#d2a789" /></svg></span>
+                      <span>Escribir mi cartita</span>
+                    </button>
+                    <div class="letter-body" id="letter-body">
+                    <label for="guest-message">Tu cartita <span class="field-required">(opcional)</span></label>
+                    <textarea id="guest-message" name="mensaje" rows="5" maxlength="2000" placeholder="Cuando leas esto, quiero que sepas que…" aria-describedby="letter-hint message-counter guest-message-error"></textarea>
+                    <p class="message-counter" id="message-counter" aria-live="off"><span id="message-length">0</span> / 2000 caracteres</p>
+                    <p class="field-error" id="guest-message-error" hidden></p>
+                    </div>
+                  </div>
+                  <div class="rsvp-honeypot" aria-hidden="true" inert>
+                    <label for="guest-website">Deja este campo vacío</label>
+                    <input id="guest-website" name="sitioWeb" type="text" tabindex="-1" autocomplete="off" />
+                  </div>
+                </fieldset>
+                <button class="rsvp-submit" id="rsvp-submit" type="submit" disabled>Enviar confirmación</button>
+              </form>
+              <p class="rsvp-privacy" id="rsvp-privacy">Tus palabras son un regalo para mi yo del futuro.</p>
+              <div class="rsvp-result" id="rsvp-result" role="status" aria-live="polite" aria-atomic="true" tabindex="-1"></div>
+              <button class="rsvp-submit rsvp-demo-again" id="rsvp-demo-again" type="button" hidden>Escribir otra cartita</button>
+              <noscript><p class="rsvp-hint">Activa JavaScript para utilizar el buzón.</p></noscript>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="birthday-guest-notes" id="detalles-invitados" aria-labelledby="guest-notes-title">
+        <div class="guest-notes-content">
+          <header class="guest-notes-heading" data-reveal>
+            <p class="presentation-eyebrow guest-notes-eyebrow">Para disfrutar juntos</p>
+            <div class="guest-notes-title-row">
+              <svg class="guest-notes-teddy" viewBox="0 0 166 170" width="166" height="170" aria-hidden="true" focusable="false">
+                <image href="./assets/osito.webp" x="0" y="10" width="154" height="154" />
+                <g transform="rotate(8 112 116)">
+                  <rect x="87" y="83" width="53" height="67" rx="6" fill="#e3ceb8" opacity=".35" transform="translate(2 3)" />
+                  <rect x="87" y="83" width="53" height="67" rx="6" fill="#fcf9f3" stroke="#c2a486" stroke-width="1.1" />
+                  <rect x="103" y="79" width="21" height="10" rx="3" fill="#dec3a6" stroke="#b99b7c" stroke-width=".8" />
+                  <g fill="none" stroke="#a67e5e" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m96 103 2 2 4-4m-6 15 2 2 4-4m-6 15 2 2 4-4" />
+                    <path d="M108 103h22m-22 13h18m-18 13h22" stroke="#c4aa8d" />
+                  </g>
+                </g>
+                <ellipse cx="90" cy="123" rx="8" ry="7" fill="#c8996b" stroke="#b4875f" stroke-width=".7" transform="rotate(24 90 123)" />
+              </svg>
+              <h2 class="guest-notes-title" id="guest-notes-title">Unos detallitos<br /><span>antes de la fiesta</span></h2>
+            </div>
+            <p class="guest-notes-intro">Te compartimos algunas cositas para que vengas preparado y disfrutes este día con nosotros.</p>
+          </header>
+
+          <!-- Respaldo sin JavaScript de las tres notas de muestra editables. -->
+          <ul class="guest-notes-grid" id="guest-notes-list" aria-label="Notas de mamá y papá" data-reveal>
+            <li class="guest-note" data-reveal>
+              <div class="guest-note-top"><span class="guest-note-icon" aria-hidden="true"><svg viewBox="0 0 40 40" width="40" height="40" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="m14 8-8 5 4 8 4-2v14h12V19l4 2 4-8-8-5" /><path d="M14 8c0 7 12 7 12 0m-12 20h12" /></g></svg></span></div>
+              <h3 class="guest-note-title">Ven cómodo</h3>
+              <p class="guest-note-description">Trae ropa cómoda para disfrutar la celebración.</p>
+            </li>
+            <li class="guest-note" data-reveal>
+              <div class="guest-note-top"><span class="guest-note-icon" aria-hidden="true"><svg viewBox="0 0 40 40" width="40" height="40" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M10 15h20l2 18H8Zm5 0v-4a5 5 0 0 1 10 0v4" /><path d="M20 28c-3-2-5-4-5-6a3 3 0 0 1 5-2 3 3 0 0 1 5 2c0 2-2 4-5 6Z" /></g></svg></span></div>
+              <h3 class="guest-note-title">Con ganas de celebrar</h3>
+              <p class="guest-note-description">Lo más bonito será compartir este día contigo.</p>
+            </li>
+            <li class="guest-note" data-reveal>
+              <div class="guest-note-top"><span class="guest-note-icon" aria-hidden="true"><svg viewBox="0 0 40 40" width="40" height="40" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><rect x="10" y="9" width="22" height="26" rx="3" /><rect x="16" y="5" width="10" height="7" rx="2" fill="var(--paper)" /><path d="m14 19 2 2 3-4m3 2h6m-14 8 2 2 3-4m3 2h6" /></g></svg></span></div>
+              <h3 class="guest-note-title">Un recuerdo en familia</h3>
+              <p class="guest-note-description">Disfruta las risas, los abrazos y los pequeños momentos de la fiesta.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="birthday-farewell" id="despedida" aria-labelledby="farewell-title">
+        <div class="farewell-balloons" data-reveal aria-hidden="true">
+          <img class="farewell-balloon farewell-balloon--peach" src="./assets/balloon-peach.svg" alt="" width="116" height="340" loading="lazy" />
+          <img class="farewell-balloon farewell-balloon--cream" src="./assets/balloon-cream.svg" alt="" width="100" height="320" loading="lazy" />
+        </div>
+        <div class="farewell-content">
+          <p class="presentation-eyebrow farewell-eyebrow" data-reveal>Gracias por ser parte de mi historia</p>
+          <h2 class="farewell-title" id="farewell-title" data-reveal>¡Nos vemos<br /><span>en mi fiesta!</span></h2>
+          <p class="countdown-when farewell-when" id="farewell-when" data-reveal></p>
+          <div class="farewell-actions" data-reveal>
+            <a class="farewell-button" href="#confirmacion">
+              <span>Confirmar asistencia</span>
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M5 12h13m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+            </a>
+            <a class="farewell-top" href="#portada">
+              <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path d="M12 19V6m-5 5 5-5 5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+              <span>Volver al inicio</span>
+            </a>
+          </div>
+          <p class="farewell-signature" data-reveal><span class="farewell-signature__lead">Con mucho amor,</span> <span class="farewell-signature__name" data-name>Yovana</span></p>
+        </div>
+        <footer class="farewell-footer" data-reveal>
+          <span class="farewell-footer__rule" aria-hidden="true"></span>
+          <p class="farewell-studio"><span class="farewell-studio__name">rotf<span>.</span></span> <span class="farewell-studio__label">STUDIO</span></p>
+          <p class="farewell-credit">Invitación digital</p>
+        </footer>
+      </section>
+
+      <!-- La apertura emite el evento "invitation:opened" sobre #invitation. -->
+    </main>
+
+    <template id="guest-note-icons">
+      <svg data-note-icon="ropa" viewBox="0 0 40 40" width="40" height="40" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="m14 8-8 5 4 8 4-2v14h12V19l4 2 4-8-8-5" /><path d="M14 8c0 7 12 7 12 0m-12 20h12" /></g></svg>
+      <svg data-note-icon="bolsa" viewBox="0 0 40 40" width="40" height="40" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M10 15h20l2 18H8Zm5 0v-4a5 5 0 0 1 10 0v4" /><path d="M20 28c-3-2-5-4-5-6a3 3 0 0 1 5-2 3 3 0 0 1 5 2c0 2-2 4-5 6Z" /></g></svg>
+      <svg data-note-icon="actividades" viewBox="0 0 40 40" width="40" height="40" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="20" cy="18" r="11" /><path d="M9 18h22M20 7c-8 6-8 16 0 22m0-22c8 6 8 16 0 22M6 34q4-3 8 0t8 0 8 0 6 0" /></g></svg>
+      <svg data-note-icon="acceso" viewBox="0 0 40 40" width="40" height="40" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M7 27V14a3 3 0 0 1 3-3h20a3 3 0 0 1 3 3v13M5 27h30M11 22l3-7h12l3 7v9H11Z" /><path d="M12 22h16m-13 4h2m6 0h2" /><path d="M13 31v3m14-3v3" /></g></svg>
+      <svg data-note-icon="regalo" viewBox="0 0 40 40" width="40" height="40" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="15" width="26" height="6" rx="2" /><path d="M10 21v13h20V21M20 15v19m0-19c-8 0-11-2-9-6s7-1 9 6Zm0 0c8 0 11-2 9-6s-7-1-9 6Z" /></g></svg>
+      <svg data-note-icon="lista" viewBox="0 0 40 40" width="40" height="40" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><rect x="10" y="9" width="22" height="26" rx="3" /><rect x="16" y="5" width="10" height="7" rx="2" fill="var(--paper)" /><path d="m14 19 2 2 3-4m3 2h6m-14 8 2 2 3-4m3 2h6" /></g></svg>
+    </template>
+
+    <template id="memory-placeholder-template">
+      <div class="memory-placeholder">
+        <svg viewBox="0 0 64 52" width="64" height="52" aria-hidden="true" focusable="false">
+          <g fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="8" y="6" width="48" height="39" rx="7" />
+            <circle cx="42" cy="18" r="4" />
+            <path d="m9 36 14-14 15 17m-6-6 9-8 14 14" />
+          </g>
+        </svg>
+        <span class="memory-placeholder__label"></span>
+        <span class="memory-placeholder__hint">Un recuerdo por guardar</span>
+      </div>
+    </template>
+
+    <dialog class="memory-viewer" id="memory-viewer" aria-labelledby="viewer-title">
+      <div class="viewer-panel">
+        <header class="viewer-header">
+          <h2 id="viewer-title"></h2>
+          <button class="viewer-close" id="viewer-close" type="button" autofocus>
+            <span>Cerrar</span>
+            <svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true" focusable="false"><path d="m5 5 10 10M15 5 5 15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" /></svg>
+          </button>
+        </header>
+        <div class="viewer-photo-stage">
+          <button class="viewer-nav viewer-nav--prev" id="viewer-prev" type="button" aria-label="Foto anterior">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path d="m14.5 6-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg>
+          </button>
+          <img id="viewer-photo" alt="" />
+          <button class="viewer-nav viewer-nav--next" id="viewer-next" type="button" aria-label="Foto siguiente">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path d="m9.5 6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg>
+          </button>
+        </div>
+        <p class="viewer-error" role="status" hidden>No pudimos cargar esta fotografía.</p>
+        <footer class="viewer-footer">
+          <p class="viewer-caption" id="viewer-caption"></p>
+          <p class="viewer-counter" id="viewer-counter" aria-hidden="true"></p>
+        </footer>
+      </div>
+    </dialog>
+  </body>
+</html>

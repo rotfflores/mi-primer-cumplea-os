@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Confirmación y carta privada de la invitación",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["invitacionId", "nombreInvitado", "asistencia", "adultos", "ninos", "mensaje", "antispam"],
+  "properties": {
+    "invitacionId": { "type": "string", "minLength": 1, "maxLength": 100, "pattern": "^[a-zA-Z0-9_-]+$" },
+    "nombreInvitado": { "type": "string", "minLength": 1, "maxLength": 100, "pattern": "\\S" },
+    "asistencia": { "enum": ["si", "no"] },
+    "adultos": { "type": "integer", "minimum": 0, "maximum": 9007199254740991 },
+    "ninos": { "type": "integer", "minimum": 0, "maximum": 9007199254740991 },
+    "mensaje": { "type": "string", "maxLength": 2000 },
+    "antispam": {
+      "type": "object", "additionalProperties": false,
+      "required": ["sitioWeb", "tiempoFormularioMs"],
+      "properties": {
+        "sitioWeb": { "type": "string", "maxLength": 0 },
+        "tiempoFormularioMs": { "type": "integer", "minimum": 0, "maximum": 9007199254740991 }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "asistencia": { "const": "si" } }, "required": ["asistencia"] },
+      "then": { "properties": { "adultos": { "minimum": 1 } } },
+      "else": { "properties": { "adultos": { "const": 0 }, "ninos": { "const": 0 } } }
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="116" height="340" viewBox="0 0 116 340">
+  <defs>
+    <radialGradient id="peach" cx="35%" cy="29%" r="77%">
+      <stop stop-color="#efcdb6"/><stop offset=".6" stop-color="#e5b797"/><stop offset="1" stop-color="#d5a382"/>
+    </radialGradient>
+  </defs>
+  <path d="M58 139c1 34-14 43-8 69s21 36 14 62-12 43-8 66" fill="none" stroke="#ab8c73" stroke-width="1" opacity=".6"/>
+  <path d="M58 4C29 3 9 24 8 55c-2 37 17 59 49 80 32-20 50-46 49-79C105 25 87 5 58 4Z" fill="url(#peach)" stroke="#d1a385" stroke-width=".6"/>
+  <path d="m57 134-5 8 12-1-6-7" fill="#d6a684"/>
+</svg>
